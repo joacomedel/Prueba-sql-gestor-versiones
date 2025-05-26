@@ -17,15 +17,20 @@ handle_error() {
 cleanup_failed_push() {
     echo -e "\n${YELLOW}Realizando limpieza por fallo...${NC}"
     
-    # 1. Quitar del staging
-    git reset "$ARCHIVO_DESTINO" || echo -e "${YELLOW}Advertencia: No se pudo sacar del staging${NC}"
+    # 1. Quitar del staging tanto el archivo nuevo como el eliminado
+    git reset HEAD "$ARCHIVO_DESTINO" || echo -e "${YELLOW}Advertencia: No se pudo sacar del staging${NC}"
     
-    # 2. Eliminar archivo copiado
+    # 2. Restaurar archivo original si fue eliminado
+    if [ ! -f "$ARCHIVO_ORIGEN" ] && [ -f "$ARCHIVO_DESTINO" ]; then
+        mv "$ARCHIVO_DESTINO" "$ARCHIVO_ORIGEN" || echo -e "${YELLOW}Advertencia: No se pudo restaurar archivo original${NC}"
+    fi
+    
+    # 3. Eliminar archivo de historial si existe
     if [ -f "$ARCHIVO_DESTINO" ]; then
         rm "$ARCHIVO_DESTINO" || echo -e "${YELLOW}Advertencia: No se pudo eliminar $ARCHIVO_DESTINO${NC}"
     fi
     
-    # 3. Eliminar el commit local (si existe)
+    # 4. Eliminar el commit local (si existe)
     if git cherry -v origin/$(git branch --show-current) | grep -q "$NOMBRE_COMMIT"; then
         git reset --soft HEAD~1 || echo -e "${YELLOW}Advertencia: No se pudo eliminar el commit local${NC}"
     fi
@@ -46,7 +51,6 @@ FECHA_HORA=$(date +"%Y%m%d_%H%M%S")
 NOMBRE_COMMIT=$1
 
 # Crear carpeta de historial si no existe
-
 mkdir -p "$CARPETA_HISTORIAL" || handle_error "No se pudo crear la carpeta $CARPETA_HISTORIAL"
 
 # Verificar si el archivo origen existe
@@ -57,26 +61,23 @@ fi
 # Generar nombre del archivo de historial
 ARCHIVO_DESTINO="${CARPETA_HISTORIAL}/${FECHA_HORA}_${NOMBRE_USUARIO}_${NOMBRE_COMMIT// /_}.sql"
 
-# 1. Copiar el archivo al historial
+# 1. Copiar el archivo al historial (sin eliminarlo aún)
 cp "$ARCHIVO_ORIGEN" "$ARCHIVO_DESTINO" || handle_error "Falló al copiar $ARCHIVO_ORIGEN a $ARCHIVO_DESTINO"
-
-# Eliminar archivo original (con confirmación)
-if [ -f "$ARCHIVO_ORIGEN" ]; then
-    rm "$ARCHIVO_ORIGEN" || echo -e "${YELLOW}Advertencia: No se pudo eliminar $ARCHIVO_ORIGEN${NC}"
-fi
 
 # 2. Añadir archivo al staging
 git add "$ARCHIVO_DESTINO" || handle_error "Falló al agregar archivo al staging"
 
 # 3. Hacer commit
-git commit -m "Historial: $NOMBRE_COMMIT (${FECHA_HORA})" 
-if git commit -m "Historial: $NOMBRE_COMMIT (${FECHA_HORA})"; then
-        break
-    else
-        cleanup_failed_push
-        handle_error "Falló al hacer commit"
+if ! git commit -m "Historial: $NOMBRE_COMMIT (${FECHA_HORA})"; then
+    cleanup_failed_push
 fi
-# 4. Hacer push con reintentos
+
+# 4. Solo ahora eliminar el archivo original (después del commit exitoso)
+if [ -f "$ARCHIVO_ORIGEN" ]; then
+    rm "$ARCHIVO_ORIGEN" || echo -e "${YELLOW}Advertencia: No se pudo eliminar $ARCHIVO_ORIGEN${NC}"
+fi
+
+# 5. Hacer push con reintentos
 MAX_INTENTOS=3
 INTENTO=1
 PUSH_EXITOSO=false
