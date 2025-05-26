@@ -11,7 +11,7 @@ BEGIN
       FETCH camformulatope INTO untope;
       WHILE FOUND LOOP
             if (untope.idformulatope = 0) THEN
-               -- updateo la fecha fin del anterior
+               -- updateo la fecha fin del anterior   
                UPDATE ca.formulatope
                SET astcctfechahasta = untope.astcctfechadesde
                WHERE nullvalue(astcctfechahasta) and idformula = untope.idformula;
