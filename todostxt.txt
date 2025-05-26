@@ -1,8 +1,8 @@
 ca.abmformulatope().sql
 ca.abmliquidacionhorastrabajadas(character varying).sql
 ca.abrirliquidacion(integer).sql
-ca.actualizarconcepto(integer).sql
 ca.actualizarconcepto().sql
+ca.actualizarconcepto(integer).sql
 ca.actualizarmontoactacuerdo0221(bigint, double precision, double precision, integer).sql
 ca.adicionalconectividad(integer, integer, integer, integer).sql
 ca.amempleado().sql
@@ -15,17 +15,17 @@ ca.as_aportespagaros(integer, integer).sql
 ca.as_aportespagarss(integer, integer).sql
 ca.as_apunc(integer, integer, integer).sql
 ca.as_art(integer, integer, integer).sql
-ca.as_conceptoasiento(integer, integer, integer).sql
 ca.as_conceptoasiento(integer, integer, integer, integer, integer, integer, integer, integer).sql
-ca.as_conceptoasiento(integer, integer, integer, integer, integer, integer, integer).sql
-ca.as_conceptoasiento(integer, integer, integer, integer, integer, integer).sql
+ca.as_conceptoasiento(integer, integer, integer).sql
 ca.as_conceptoasiento(integer, integer, integer, integer).sql
+ca.as_conceptoasiento(integer, integer, integer, integer, integer, integer).sql
+ca.as_conceptoasiento(integer, integer, integer, integer, integer, integer, integer).sql
 ca.as_conceptoasiento(integer, integer, integer, integer, integer).sql
 ca.as_contribucionesos(integer, integer, integer).sql
 ca.as_contribucionessatf(integer, integer).sql
 ca.as_contribucionessindicato(integer, integer, integer).sql
-ca.as_contribucionesss(integer, integer, integer).sql
 ca.as_contribucionesss(integer, integer, integer, integer).sql
+ca.as_contribucionesss(integer, integer, integer).sql
 ca.as_contribucionesss_bk_borrar(integer, integer, integer).sql
 ca.as_cta_asistencial(integer, integer, integer).sql
 ca.as_cta_prestamo_asistencial(integer, integer, integer).sql
@@ -42,8 +42,8 @@ ca.as_ret4cat(integer, integer).sql
 ca.as_ret_cuarta_cat(integer, integer, integer).sql
 ca.as_ret_judiciales_personal_pagar(integer, integer, integer).sql
 ca.as_retenciones4cat(integer, integer).sql
-ca.as_segurovida(integer).sql
 ca.as_segurovida(integer, integer, integer).sql
+ca.as_segurovida(integer).sql
 ca.as_segurovidagasto(integer, integer, integer).sql
 ca.as_sindicato_atf(integer, integer, integer).sql
 ca.as_sindicatoatf(integer, integer).sql
@@ -64,8 +64,8 @@ ca.cantempleadososu(integer, integer, integer).sql
 ca.cantidaddiaslaborables(date, date, integer).sql
 ca.cantidaddiaslaborables(date, date).sql
 ca.cantidaddiaslaborablesempleado(date, date, integer).sql
-ca.cantidaddiassegunlicencia(date, date, integer, integer).sql
 ca.cantidaddiassegunlicencia(date, date, integer).sql
+ca.cantidaddiassegunlicencia(date, date, integer, integer).sql
 ca.conceptovalor(integer, integer, integer, integer).sql
 ca.conceptovalor(integer, integer, integer, integer, integer).sql
 ca.conceptovalor(integer, integer, integer, integer, integer, integer).sql
@@ -209,8 +209,8 @@ ca.reemplazarparametrosasiento(integer, integer, integer, character varying, cha
 ca.reemplazarparametrosasiento1(integer, integer, integer, character varying, character varying).sql
 ca.reffunc(refcursor).sql
 ca.reffunc2().sql
-ca.reportarmovimientosfaltantes(date, date, bigint, refcursor).sql
 ca.reportarmovimientosfaltantes(date, date, bigint).sql
+ca.reportarmovimientosfaltantes(date, date, bigint, refcursor).sql
 ca.reportehorastrabajadas().sql
 ca.reportehorastrabajadas(character varying).sql
 ca.ret_contrib_solidariacct(integer, integer, integer).sql
@@ -254,8 +254,8 @@ public.actualizaramucaa(character varying).sql
 public.actualizaramucab(character varying).sql
 public.actualizaramucba(character varying).sql
 public.actualizaramucbb(character varying).sql
-public.actualizarbarrabenefreci().sql
 public.actualizarbarrabenefreci(smallint, character varying, smallint).sql
+public.actualizarbarrabenefreci().sql
 public.actualizarbarrabenefsosunc().sql
 public.actualizarbarrabenefsosunc(smallint, character varying, smallint).sql
 public.actualizarcambioestbenef().sql
@@ -676,8 +676,8 @@ public.agregarPlanesCobertura().sql
 public.agregaraportes().sql
 public.agregaraportes(character varying, character varying, integer, integer).sql
 public.agregaraportes_sosunc().sql
-public.agregaraportes_sosunc_unafil().sql
 public.agregaraportes_sosunc_unafil(character varying).sql
+public.agregaraportes_sosunc_unafil().sql
 public.agregaraportesaux().sql
 public.agregaraportesaux2().sql
 public.agregaraportesjubpen(character varying).sql
@@ -686,15 +686,15 @@ public.agregaraporteslicencia().sql
 public.agregaraporteslicenciamaternidad().sql
 public.agregaraportesmanual(character varying).sql
 public.agregaraportesmanualretroactivo(character varying).sql
-public.agregaraportesparaunafiliado(bigint).sql
 public.agregaraportesparaunafiliado(bigint, integer, integer).sql
+public.agregaraportesparaunafiliado(bigint).sql
 public.agregaraportesv2().sql
 public.agregarconvenios().sql
 public.agregardescuentosconceptos(pmes integer, panio integer).sql
 public.agregardescuentosconceptos().sql
 public.agregardescuentosconceptos_manual(character varying).sql
-public.agregardescuentosconceptossosunc(pmes integer, panio integer).sql
 public.agregardescuentosconceptossosunc().sql
+public.agregardescuentosconceptossosunc(pmes integer, panio integer).sql
 public.agregardescuentosconceptossosunc_manual().sql
 public.agregardescuentosconceptossosunc_test().sql
 public.agregardescuentosconceptossosuncempfarmacia(character varying).sql
@@ -703,8 +703,8 @@ public.agregareninforme(character varying, bigint, date, bigint, character varyi
 public.agregareninformev2(character varying, bigint, character varying, integer).sql
 public.agregarentaporterecibido(character varying, integer, character varying).sql
 public.agregaresquema(nombreesquema character varying).sql
-public.agregarinformefacturacionamucitem(integer, character varying).sql
 public.agregarinformefacturacionamucitem(integer).sql
+public.agregarinformefacturacionamucitem(integer, character varying).sql
 public.agregarinformefacturacioncobranzaitem(integer, integer, character varying).sql
 public.agregarinformefacturacionreciprocidaditem(integer, integer).sql
 public.agregarliquidaciontarjeta().sql
@@ -722,8 +722,8 @@ public.agregartareaprogramada(idtareap character varying, procedimientop charact
 public.agregarunaporte(character varying, character varying, integer, integer, integer, double precision, integer, integer).sql
 public.agregarunaporte(character varying, character varying, integer, integer, integer, double precision, integer).sql
 public.agregarunaporte1(varchar, varchar, integer, integer, integer, d(character varying, character varying, integer, integer, integer, double precision).sql
-public.agregarunasiento(integer, integer, integer, double precision, double precision, double precision, double precision, double precision).sql
 public.agregarunasiento(integer, integer).sql
+public.agregarunasiento(integer, integer, integer, double precision, double precision, double precision, double precision, double precision).sql
 public.alerta_auditoriamedica_segmedicamentos().sql
 public.alerta_controlprecioarticulos().sql
 public.alerta_controltalonarioventas().sql
@@ -850,8 +850,8 @@ public.amcuponestado().sql
 public.amdatosauditoriafacturafarmacia().sql
 public.amdebitofacturaprestador().sql
 public.amdeclarasubs().sql
-public.amdireccion(bigint).sql
 public.amdireccion().sql
+public.amdireccion(bigint).sql
 public.amdireccionconvenio().sql
 public.amdiscpersona().sql
 public.amdiscpersonaborradas().sql
@@ -1215,11 +1215,11 @@ public.asentarconsulta().sql
 public.asentarconsulta(tipoc integer).sql
 public.asentarconsultamanual().sql
 public.asentarconsultarecetario().sql
-public.asentarconsultarecibo().sql
 public.asentarconsultarecibo(tipoc integer).sql
+public.asentarconsultarecibo().sql
 public.asentarconsumoctacte(bigint, integer).sql
-public.asentarconsumoctactev2(bigint, integer).sql
 public.asentarconsumoctactev2(bigint, integer, bigint).sql
+public.asentarconsumoctactev2(bigint, integer).sql
 public.asentarconsumorecetarioctacte(bigint, integer).sql
 public.asentarenviodescuentotacte(bigint).sql
 public.asentarenviodescuentotactev2(character varying).sql
@@ -1268,8 +1268,8 @@ public.asentarreciboorden().sql
 public.asentarrecibopago().sql
 public.asentarrecibopagoversion2().sql
 public.asentarreclamoaporte(character varying, integer, integer, integer).sql
-public.asentarvalorizada().sql
 public.asentarvalorizada(tipoc integer).sql
+public.asentarvalorizada().sql
 public.asentarvalorizadarecibo(tipoc integer).sql
 public.asentarvalorizadarecibo().sql
 public.asientogenerico_anulacioncontable(pidcomprobante character varying, ptipo integer).sql
@@ -1318,8 +1318,8 @@ public.asientogenericoordenpago_crear(pidoperacion bigint).sql
 public.asientogenericoordenpago_crear_tr().sql
 public.asientogenericoordenpago_upd_tr().sql
 public.asientogenericoreclibrofact_actualizar_tr().sql
-public.asientogenericoreclibrofact_crear(pidoperacion bigint).sql
 public.asientogenericoreclibrofact_crear(pidoperacion character varying).sql
+public.asientogenericoreclibrofact_crear(pidoperacion bigint).sql
 public.asientogenericoreclibrofact_crear_tr().sql
 public.asientogenericoreclibrofact_delete_tr().sql
 public.asientorevertir().sql
@@ -1390,8 +1390,8 @@ public.bisiesto(integer).sql
 public.borrar_asienntogeneico().sql
 public.borrarbarrabenefyactualizarbarrapersona(integer, character varying).sql
 public.borrarcupon(integer, integer).sql
-public.borrarpagojubilado(bigint, integer).sql
 public.borrarpagojubilado(bigint, integer, character varying).sql
+public.borrarpagojubilado(bigint, integer).sql
 public.borrarreintegros(character varying, character varying).sql
 public.borrartablasnomenclador().sql
 public.borrartarjeta(integer, integer).sql
@@ -1442,20 +1442,20 @@ public.calcularmonto(integer).sql
 public.calcularmontodispcuentacorriente(pfiltros character varying).sql
 public.calcularmontosdisponibles(pfiltros character varying).sql
 public.calcularplandepago(pfiltros character varying).sql
-public.calcularvalorespractica(pfiltros character varying).sql
 public.calcularvalorespractica(pechaingreso date).sql
-public.calcularvalorespractica(ppcvfechaingreso timestamp without time zone).sql
 public.calcularvalorespractica().sql
+public.calcularvalorespractica(ppcvfechaingreso timestamp without time zone).sql
+public.calcularvalorespractica(pfiltros character varying).sql
 public.calcularvalorespractica_masivo(ppcvfechaingreso timestamp without time zone).sql
 public.calcularvalorespractica_masivo_completo(pfiltros character varying).sql
 public.calcularvalorespracticaxcategoria().sql
-public.calcularvalorespracticaxcategoria(pechaingreso timestamp without time zone).sql
 public.calcularvalorespracticaxcategoria(pechaingreso date).sql
+public.calcularvalorespracticaxcategoria(pechaingreso timestamp without time zone).sql
 public.calcularvalorespracticaxcategoria(pfiltros character varying).sql
 public.calcularvalorespracticaxcategoria_masivo(pechaingreso timestamp without time zone).sql
 public.calcularvalorespracticaxcategoria_solohisto(pfiltros character varying).sql
-public.cambiar_estado_recetariotp(integer, integer).sql
 public.cambiar_estado_recetariotp().sql
+public.cambiar_estado_recetariotp(integer, integer).sql
 public.cambiarcentrotarjeta(character varying, integer, integer).sql
 public.cambiarestado(boolean, date, date, integer, character varying, character varying, integer).sql
 public.cambiarestadoasientogenerico(pidasientogenerico bigint, pidcentro integer, pidestado integer).sql
@@ -1486,8 +1486,8 @@ public.cambioestadoafilreci().sql
 public.cambioestadoafilsosunc().sql
 public.cambioestadobenefreci().sql
 public.cambioestadobenefsosunc().sql
-public.cambioestadofactura(pnroregistro integer, panio integer, ptipoestadofactura integer).sql
 public.cambioestadofactura(character varying).sql
+public.cambioestadofactura(pnroregistro integer, panio integer, ptipoestadofactura integer).sql
 public.cambioestadoordenpagosetfechafin().sql
 public.cambioreintegro(integer, integer, integer).sql
 public.cambiotipodoc().sql
@@ -1524,23 +1524,23 @@ public.cd_titularesporlocalidad_contemporal(pfiltros character varying).sql
 public.centro().sql
 public.centro_costo_comp_compra(character varying).sql
 public.cerrarcomprobantescompra().sql
-public.cerrarliquidaciontarjeta(pidliquidacion integer, pidmultivac character varying).sql
-public.cerrarliquidaciontarjeta().sql
 public.cerrarliquidaciontarjeta(pidliquidacion bigint, pidcentroregional integer, pidmultivac character varying).sql
+public.cerrarliquidaciontarjeta().sql
+public.cerrarliquidaciontarjeta(pidliquidacion integer, pidmultivac character varying).sql
 public.cerrarordenpagocontable(pidordenpagocontable bigint, pidcentroordenpagocontable integer, pidmultivac bigint).sql
 public.cerrarregistros().sql
 public.circuito_documentos_contemporal(pfiltros character varying).sql
 public.colegiomedico_migrarcomprobante().sql
 public.comprobantes_contemporal(pfiltros character varying).sql
-public.concat(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text).sql
-public.concat(text, text).sql
-public.concat(text, text, text, text).sql
+public.concat(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text).sql
 public.concat(text, text, text).sql
+public.concat(text, text, text, text).sql
+public.concat(text, text).sql
+public.concat(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text).sql
 public.concat(text, text, text, text, text).sql
 public.concat(text, text, text, text, text, text, text).sql
 public.concat(text, text, text, text, text, text, text, text).sql
 public.concat(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text).sql
-public.concat(text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text, text).sql
 public.concatenar(text, text).sql
 public.concatenarsinrepetir(text, text).sql
 public.conciliacionbancaria_actualizar().sql
@@ -1609,8 +1609,8 @@ public.contabilidad_conciliarcuenta_infopaquete(character varying).sql
 public.contabilidad_conciliarcuenta_infopaquete_inv().sql
 public.contabilidad_ejercicio_info(character varying).sql
 public.contabilidad_ejerciciocontable_abm(character varying).sql
-public.contabilidad_eliminarasiento(pfiltros character varying).sql
 public.contabilidad_eliminarasiento(pidasiento bigint, pidcentro integer).sql
+public.contabilidad_eliminarasiento(pfiltros character varying).sql
 public.contabilidad_generarminutaimputacion(character varying).sql
 public.contabilidad_generarminutaimputacion_corredtic(character varying).sql
 public.contabilidad_generarminutaimputacioncliente(character varying).sql
@@ -1652,8 +1652,8 @@ public.contabilidad_periodofiscal_vincularcomprobante_tr().sql
 public.contabilidad_periodofiscal_vincularcompventa_tr().sql
 public.contabilidad_saldocontable(pnrocuentac character varying, pdh character, pfechahasta date).sql
 public.contable_libromayor_contemporal(pfiltros character varying).sql
-public.contarfacturasfaltantes(c integer).sql
 public.contarfacturasfaltantes(c integer, anio integer).sql
+public.contarfacturasfaltantes(c integer).sql
 public.control_consumos_afiliado_rango_mes_calendario_contemporal(character varying).sql
 public.control_ordenes_contemporal(pfiltros character varying).sql
 public.control_ordenfarmacia_obrasocial_contemporal(pfiltros character varying).sql
@@ -1671,8 +1671,8 @@ public.controles_detalleingresos_contemporal(pfiltros character varying).sql
 public.controles_distribucionedades_contemporal(pfiltros character varying).sql
 public.controles_distribucionedades_ingresos_contemporal(pfiltros character varying).sql
 public.controles_facturacionfarmacia_contemporal(pfiltros character varying).sql
-public.controles_ordenespendientefac_contemporal(pfiltros character varying).sql
 public.controles_ordenespendientefac_contemporal().sql
+public.controles_ordenespendientefac_contemporal(pfiltros character varying).sql
 public.controles_practicasporplan_contemporal(pfiltros character varying).sql
 public.controles_reporteconveniosunidades_contemporal(pfiltros character varying).sql
 public.controlfacturacion(date, date, bigint).sql
@@ -1799,8 +1799,8 @@ public.ejemcargarconsumo().sql
 public.ejemcargarordenconsulta().sql
 public.ejempcargarorden().sql
 public.ejempcargarorden()().sql
-public.elimina_preauditoria_odonto(integer, integer).sql
 public.elimina_preauditoria_odonto(integer, integer, integer).sql
+public.elimina_preauditoria_odonto(integer, integer).sql
 public.eliminaraportefaltante(character varying, integer, integer, integer).sql
 public.eliminarccacciofar(fila acciofar).sql
 public.eliminarccactasdefun(fila actasdefun).sql
@@ -1874,8 +1874,8 @@ public.eliminarccctacteprestador(fila ctacteprestador).sql
 public.eliminarccctasctesmontosdescuento(fila ctasctesmontosdescuento).sql
 public.eliminarcccuentacorrientedeuda(fila cuentacorrientedeuda).sql
 public.eliminarcccuentacorrientedeuda_ext(fila cuentacorrientedeuda_ext).sql
-public.eliminarcccuentacorrientedeudapago(fila cuentacorrientedeudapago).sql
 public.eliminarcccuentacorrientedeudapago(fila cuentacorrientedeudapago_anterior).sql
+public.eliminarcccuentacorrientedeudapago(fila cuentacorrientedeudapago).sql
 public.eliminarcccuentacorrientedeudapagocompensacion(fila cuentacorrientedeudapagocompensacion).sql
 public.eliminarcccuentacorrientedeudapagoordenpago(fila cuentacorrientedeudapagoordenpago).sql
 public.eliminarcccuentacorrientepagos(fila cuentacorrientepagos).sql
@@ -2210,8 +2210,8 @@ public.expendio_tiene_amuc(character varying, integer).sql
 public.expendio_tiene_ctacte(character varying, integer).sql
 public.expendio_tiene_ctacte_sosunc(character varying, integer).sql
 public.expendio_tiene_mutual(character varying, integer).sql
-public.expendio_verificar_consumo(character varying).sql
 public.expendio_verificar_consumo(character varying, character varying, character varying, character varying, bigint, character varying, integer, bigint).sql
+public.expendio_verificar_consumo(character varying).sql
 public.f_dar_valores_comprar().sql
 public.f_rows_to_arr(_tbl text).sql
 public.f_rows_to_arr_campos(_tbl text).sql
@@ -2259,8 +2259,8 @@ public.far_abmprecargapedidocomprobantesparatrazabilidad().sql
 public.far_abmprecargapedidoinformaciontrazabilidad().sql
 public.far_abmprecargapedidoparatrazabilidad().sql
 public.far_abmprecargapedidoparatrazabilidad__().sql
-public.far_abmprecargastockajuste().sql
 public.far_abmprecargastockajuste(parametro jsonb).sql
+public.far_abmprecargastockajuste().sql
 public.far_abmstockajuste().sql
 public.far_actualizacionlotescopahue().sql
 public.far_actualizarplancoberturamedicamento(pmnroregistro character varying, pidafiliado bigint).sql
@@ -2406,8 +2406,8 @@ public.far_procesaliqaux(integer, integer, integer, integer).sql
 public.far_procesaliquidacionordenreci(bigint, integer).sql
 public.far_procesar_liquidacion(integer, integer).sql
 public.far_procesar_pendienteliquidacionauditoria(bigint).sql
-public.far_reemitircomprobantenoemitido(bigint, integer, integer, character varying, integer, bigint).sql
 public.far_reemitircomprobantenoemitido(bigint, integer, integer, character varying, integer).sql
+public.far_reemitircomprobantenoemitido(bigint, integer, integer, character varying, integer, bigint).sql
 public.far_reemitircomprobantenoemitido_borrar(bigint, integer, integer, character varying, bigint, integer, integer, character varying).sql
 public.far_regenerarorden(character varying).sql
 public.far_reporteinventario(date, integer, integer).sql
@@ -2423,29 +2423,29 @@ public.far_traercoberturasarticuloafiliado(character varying, bigint, bigint, bi
 public.far_traercoberturasarticuloafiliado_2(character varying, bigint, bigint, bigint, integer, bigint, integer).sql
 public.far_traercoberturasarticuloafiliado_3(character varying, bigint, bigint, bigint, integer, bigint, integer).sql
 public.far_traercoberturasarticuloafiliado_3(character varying, bigint, bigint, bigint, integer, bigint, integer, integer).sql
-public.far_traercoberturasarticuloafiliado_4(character varying, bigint, bigint, bigint, integer, character varying).sql
 public.far_traercoberturasarticuloafiliado_4(character varying, bigint, bigint, bigint, integer).sql
+public.far_traercoberturasarticuloafiliado_4(character varying, bigint, bigint, bigint, integer, character varying).sql
 public.far_traercoberturasarticuloafiliado_coseguros(character varying, bigint, bigint, bigint, integer, bigint, integer, integer).sql
 public.far_traercoberturasarticuloafiliado_nueva(character varying, bigint, bigint, bigint, integer, bigint, integer, integer).sql
 public.far_traercoberturasarticuloafiliado_os(character varying, bigint, bigint, bigint, integer, bigint, integer, integer).sql
 public.far_traercoberturasarticuloafiliado_validador(character varying, bigint, bigint, bigint, integer, character varying).sql
 public.far_traercoberturasarticuloafiliado_validador_(character varying, bigint, bigint, bigint, integer, character varying, date).sql
 public.far_traercoberturascoseguroarticuloafiliado(character varying, bigint, bigint, bigint, integer, bigint, integer, integer).sql
-public.far_traerinfocoberturas(character varying).sql
 public.far_traerinfocoberturas().sql
+public.far_traerinfocoberturas(character varying).sql
 public.far_traerinfocoberturas_2().sql
 public.far_traerinfocoberturas_convalidador(character varying).sql
 public.far_traerinfocoberturas_coseguro(character varying).sql
-public.far_traerinfocoberturas_final().sql
 public.far_traerinfocoberturas_final(character varying).sql
+public.far_traerinfocoberturas_final().sql
 public.far_traerinfocoberturas_general(character varying).sql
 public.far_traerinfocoberturas_unificado().sql
 public.far_traerinfocoberturas_val().sql
 public.far_traerinfocoberturas_val_2().sql
 public.far_traerinfocoberturas_val_v2().sql
 public.far_traerinfocoberturascoseguro_val().sql
-public.far_traerinfocoberturasnueva(character varying).sql
 public.far_traerinfocoberturasnueva().sql
+public.far_traerinfocoberturasnueva(character varying).sql
 public.far_traerinforecetariotp().sql
 public.far_traerinforecetariotpv1().sql
 public.far_verificaingresaafiliacion(pnrodoc character varying, ptipodoc integer, pidobrasocial integer, pidvalidacion bigint, pidcentrovalidacion integer).sql
@@ -2484,8 +2484,8 @@ public.generar_orden_consumoafiliado_cargaritem(parametro character varying).sql
 public.generar_orden_consumoafiliado_config(parametro character varying).sql
 public.generarchequeanulado(bigint, integer, integer, bigint).sql
 public.generarcomprobanteanuladointerno(tipocomprobante integer, tipofactura character varying, nrosucursal integer, nrofacturadesde integer, centro integer, fechaanulacion date, cantidadanular integer, idusuario integer).sql
-public.generarcomprobantefacturacionanulado(bigint, integer, integer, character varying, integer, integer, date).sql
 public.generarcomprobantefacturacionanulado().sql
+public.generarcomprobantefacturacionanulado(bigint, integer, integer, character varying, integer, integer, date).sql
 public.generarcomprobantefacturacionanuladoaux().sql
 public.generarcomprobantefacturacionanuladoconparam(integer, integer, integer, integer, integer, character varying, timestamp without time zone).sql
 public.generarconsumoctacte(pparametro character varying).sql
@@ -2496,8 +2496,8 @@ public.generarimporteaportes(pfiltros character varying).sql
 public.generarimporteaportes_masivo(pfiltros character varying).sql
 public.generarinforme_expendioreintegro().sql
 public.generarinformeamuc(character varying, character varying, integer, character varying).sql
-public.generarinformeamuc().sql
 public.generarinformeamuc(character varying, character varying, integer).sql
+public.generarinformeamuc().sql
 public.generarinformecobranza(character varying, character varying, integer, character varying).sql
 public.generarinformecobranza_viejo(character varying, character varying, integer).sql
 public.generarinformecobranzactacteunc(integer, integer).sql
@@ -2509,8 +2509,8 @@ public.generarinformenotadebitominutas(character varying, character varying).sql
 public.generarinformeosreciprocidad().sql
 public.generarinformepresentacion(character varying, character varying, integer, character varying, integer).sql
 public.generarinformepresentacionotras(character varying, character varying, integer, character varying, integer).sql
-public.generarinformeturismo(integer, integer, character varying, integer, character varying, real, character varying, integer, integer).sql
 public.generarinformeturismo(integer, integer, character varying, integer, character varying, real, character varying, integer).sql
+public.generarinformeturismo(integer, integer, character varying, integer, character varying, real, character varying, integer, integer).sql
 public.generarinformeturismo_(integer, integer, character varying, integer, character varying, real, character varying, integer, integer).sql
 public.generarinformeturismointerno(integer, integer, character varying, integer, character varying, integer).sql
 public.generaringresoegresojubpen(date, date).sql
@@ -2558,8 +2558,8 @@ public.gestionarcuponesmasivos(integer, integer, date, date).sql
 public.gestionarcuponesmasivos(character varying, integer, integer, date, date).sql
 public.gestionartarjetaafi(character varying, integer, integer).sql
 public.gestionartarjetaafiliado(character varying, integer, integer).sql
-public.gestionaruncuponmasivo(integer, integer, date, date).sql
 public.gestionaruncuponmasivo(integer, integer, date).sql
+public.gestionaruncuponmasivo(integer, integer, date, date).sql
 public.gestionaruncuponmasivonojub(integer, integer).sql
 public.getidrecibo().sql
 public.getidrecibocaja().sql
@@ -2713,8 +2713,8 @@ public.insertarccctacteprestador(fila ctacteprestador).sql
 public.insertarccctasctesmontosdescuento(fila ctasctesmontosdescuento).sql
 public.insertarcccuentacorrientedeuda(fila cuentacorrientedeuda).sql
 public.insertarcccuentacorrientedeuda_ext(fila cuentacorrientedeuda_ext).sql
-public.insertarcccuentacorrientedeudapago(fila cuentacorrientedeudapago).sql
 public.insertarcccuentacorrientedeudapago(fila cuentacorrientedeudapago_anterior).sql
+public.insertarcccuentacorrientedeudapago(fila cuentacorrientedeudapago).sql
 public.insertarcccuentacorrientedeudapagocompensacion(fila cuentacorrientedeudapagocompensacion).sql
 public.insertarcccuentacorrientedeudapagoordenpago(fila cuentacorrientedeudapagoordenpago).sql
 public.insertarcccuentacorrientepagos(fila cuentacorrientepagos).sql
@@ -2991,8 +2991,8 @@ public.insertardeclarasub().sql
 public.insertarestadonuevapers(integer, integer, character varying, integer).sql
 public.insertarestadonuevoafiliado().sql
 public.insertarestadonuevoafiliadoreci().sql
-public.insertarfactura(integer).sql
 public.insertarfactura(integer, integer).sql
+public.insertarfactura(integer).sql
 public.insertarinformefacturacionitem().sql
 public.insertarnuevoestadobenef().sql
 public.insertarnuevoestadobenefreci().sql
@@ -3090,8 +3090,8 @@ public.migrarconsumoscuentacorriente().sql
 public.migrarconsumoscuentacorrientev2().sql
 public.minimadetresfechas(date, date, date).sql
 public.mistratinfo(character varying, ref refcursor).sql
-public.modif_movimiento_mp(character varying).sql
 public.modif_movimiento_mp().sql
+public.modif_movimiento_mp(character varying).sql
 public.modificar_historico_coseguro(param character varying).sql
 public.modificar_historico_coseguro_2(param character varying).sql
 public.modificaralcancecobertura().sql
@@ -3185,8 +3185,8 @@ public.primer_dia_mes_actual().sql
 public.procesaralertaafiliado(character varying, integer).sql
 public.procesaralertas().sql
 public.procesardescuentos_empleados_farmacia(character varying).sql
-public.procesardescuentos_empleados_sosunc(pmes integer, panio integer).sql
 public.procesardescuentos_empleados_sosunc().sql
+public.procesardescuentos_empleados_sosunc(pmes integer, panio integer).sql
 public.procesardescuentos_empleados_sosunc_test().sql
 public.procesarnoreclamablesaportes().sql
 public.procesarnoreclamablesctacte().sql
@@ -3248,8 +3248,8 @@ public.saldo_ctacte_proveedor_contemporal(pfiltros character varying).sql
 public.salvarsecuencias().sql
 public.setearctacteparatodos().sql
 public.sincro_crearpk().sql
-public.sincro_generaupdatemasivos().sql
 public.sincro_generaupdatemasivos(pfiltros character varying).sql
+public.sincro_generaupdatemasivos().sql
 public.sincro_guardaaccesosusuario().sql
 public.sincronizaresquemas().sql
 public.sincronizartablas(esquema text).sql
@@ -3261,8 +3261,8 @@ public.sp_cargartemporal(record).sql
 public.sp_circuitodocumento_archivos(character varying).sql
 public.sp_far_plancoberturamedicamentoafiliado(character varying).sql
 public.spparareporterecibo(character varying, character varying, character varying).sql
-public.spparareporterecibocaja(character varying, character varying, character varying, character varying).sql
 public.spparareporterecibocaja(character varying, character varying, character varying).sql
+public.spparareporterecibocaja(character varying, character varying, character varying, character varying).sql
 public.sucursal().sql
 public.sumardiaslaborables(date, integer).sql
 public.suspendercuentas(idusr text).sql
@@ -3341,29 +3341,29 @@ public.temporalhayqueborrarlo().sql
 public.tesoreria_abmcontrolcaja(character varying).sql
 public.tesoreria_adherente_asentarimputaciondescuentoctacte(character varying).sql
 public.tesoreria_adherente_imputarpagosconsaldopendiente(character varying).sql
-public.tesoreria_chequesemitidos_contemporal(pidctabancaria integer, pchnumero bigint, pfechaini date, pfechafin date).sql
 public.tesoreria_chequesemitidos_contemporal(pfiltros character varying).sql
 public.tesoreria_chequesemitidos_contemporal(pidctabancaria integer, pchnumero bigint).sql
+public.tesoreria_chequesemitidos_contemporal(pidctabancaria integer, pchnumero bigint, pfechaini date, pfechafin date).sql
 public.tesoreria_consistenciareintegroexpendio_contemporal(pfiltros character varying).sql
 public.tesoreria_controlarconsistenciareintegroexpendio_contemporal(pfiltros character varying).sql
 public.tesoreria_controlcaja_darcaja(character varying).sql
 public.tesoreria_controlcaja_tr().sql
 public.tesoreria_controlcaja_vincularcomprobante(character varying).sql
 public.tesoreria_crear_controlcaja(character varying).sql
-public.tesoreria_ctacteclientes_contemporal(pfechadesde date, pfechahasta date, pidclientectacte character varying, ptiporeporte character varying).sql
 public.tesoreria_ctacteclientes_contemporal(pfechadesde date, pfechahasta date, pidclientectacte character varying, pidcentroclientectacte character varying, ptiporeporte character varying).sql
+public.tesoreria_ctacteclientes_contemporal(pfechadesde date, pfechahasta date, pidclientectacte character varying, ptiporeporte character varying).sql
 public.tesoreria_ctacteprestador_darimportepagado(bigint, bigint).sql
-public.tesoreria_ctacteproveedores_contemporal(pfiltros character varying).sql
 public.tesoreria_ctacteproveedores_contemporal(pfechadesde date, pfechahasta date, pidprestador character varying, ptiporeporte character varying).sql
+public.tesoreria_ctacteproveedores_contemporal(pfiltros character varying).sql
 public.tesoreria_cuentasbancariasafiliados_contemporal(pfiltros character varying).sql
 public.tesoreria_dardatoscliente(character varying).sql
 public.tesoreria_desimputar_cuentascorrientes().sql
 public.tesoreria_facturacionorigentxt_contemporal(character varying).sql
 public.tesoreria_facturacionproveedores_contemporal(pfiltros character varying).sql
 public.tesoreria_imputarpagosconsaldopendiente().sql
-public.tesoreria_librofacturacionentrefechas(date, date, character varying, integer, integer).sql
 public.tesoreria_librofacturacionentrefechas(character varying).sql
 public.tesoreria_librofacturacionentrefechas(date, date, character varying, integer).sql
+public.tesoreria_librofacturacionentrefechas(date, date, character varying, integer, integer).sql
 public.tesoreria_pagoscliente_contemporal(pfiltros character varying).sql
 public.tesoreria_reintegrospracticas_contemporal(pfiltros character varying).sql
 public.tesoreria_reportecontrolcaja_contemporal(character varying).sql
