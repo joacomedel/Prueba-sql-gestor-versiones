@@ -1,3 +1,4 @@
+-- === Contenido completo de ca.abmliquidacionhorastrabajadas(cv).sql (staging) ===
 CREATE OR REPLACE FUNCTION ca.abmliquidacionhorastrabajadas(character varying)
  RETURNS character varying
  LANGUAGE plpgsql
@@ -194,3 +195,5 @@ CASE WHEN (horaentrada >horainiciojornada AND (to_char(horainiciojornada,'HH24:M
 
 return cant;
 end;$function$
+
+
