@@ -46,6 +46,7 @@ FECHA_HORA=$(date +"%Y%m%d_%H%M%S")
 NOMBRE_COMMIT=$1
 
 # Crear carpeta de historial si no existe
+
 mkdir -p "$CARPETA_HISTORIAL" || handle_error "No se pudo crear la carpeta $CARPETA_HISTORIAL"
 
 # Verificar si el archivo origen existe

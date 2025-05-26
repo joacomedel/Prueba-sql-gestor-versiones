@@ -5,6 +5,10 @@ if [ -z "$1" ]; then
     exit 1
 fi
 # Archivo de salida
+if [ ! -d "./temp" ]; then
+    mkdir -p "./temp"
+    echo "Carpeta creada: ./temp"
+fi
 OUTPUT_FILE="./temp/cambiosAAplicar.sql"
 
 # 1. Limpiar archivo existente o crear nuevo
