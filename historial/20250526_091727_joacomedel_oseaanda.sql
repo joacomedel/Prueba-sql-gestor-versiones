@@ -1,3 +1,4 @@
+-- === Contenido completo de contabilidad_balancecontable_asiento_cuentas_patrimoniales.sql (staging) ===
 CREATE OR REPLACE FUNCTION public.contabilidad_balancecontable_asiento_cuentas_patrimoniales(pfiltros character varying)
  RETURNS boolean
  LANGUAGE plpgsql
@@ -127,4 +128,6 @@ BEGIN
        return elasiento;
 END;
 $function$
+
+
 
