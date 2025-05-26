@@ -1,0 +1,13 @@
+CREATE OR REPLACE FUNCTION public.insertarccfichamedicapreauditada(fila fichamedicapreauditada)
+ RETURNS fichamedicapreauditada
+ LANGUAGE plpgsql
+AS $function$
+    BEGIN
+    fila.fichamedicapreauditadacc:= current_timestamp;
+    UPDATE sincro.fichamedicapreauditada SET fichamedicapreauditadacc= fila.fichamedicapreauditadacc, fmpacantidad= fila.fmpacantidad, fmpadescripcion= fila.fmpadescripcion, fmpadescripciondebito= fila.fmpadescripciondebito, fmpafechaingreso= fila.fmpafechaingreso, fmpaidusuario= fila.fmpaidusuario, fmpaiimporteiva= fila.fmpaiimporteiva, fmpaiimportes= fila.fmpaiimportes, fmpaiimportetotal= fila.fmpaiimportetotal, fmpaimportedebito= fila.fmpaimportedebito, fmpaporeintegro= fila.fmpaporeintegro, idauditoriaodontologiacodigo= fila.idauditoriaodontologiacodigo, idcapitulo= fila.idcapitulo, idcentrofichamedica= fila.idcentrofichamedica, idcentrofichamedicaitem= fila.idcentrofichamedicaitem, idcentrofichamedicapreauditada= fila.idcentrofichamedicapreauditada, idfichamedica= fila.idfichamedica, idfichamedicaitem= fila.idfichamedicaitem, idfichamedicapreauditada= fila.idfichamedicapreauditada, idmotivodebitofacturacion= fila.idmotivodebitofacturacion, idnomenclador= fila.idnomenclador, idpractica= fila.idpractica, idsubcapitulo= fila.idsubcapitulo, mnroregistro= fila.mnroregistro, nomenclado= fila.nomenclado, tipo= fila.tipo WHERE idcentrofichamedicapreauditada= fila.idcentrofichamedicapreauditada AND idfichamedicapreauditada= fila.idfichamedicapreauditada AND TRUE;
+    IF NOT FOUND THEN
+		INSERT INTO sincro.fichamedicapreauditada(fichamedicapreauditadacc, fmpacantidad, fmpadescripcion, fmpadescripciondebito, fmpafechaingreso, fmpaidusuario, fmpaiimporteiva, fmpaiimportes, fmpaiimportetotal, fmpaimportedebito, fmpaporeintegro, idauditoriaodontologiacodigo, idcapitulo, idcentrofichamedica, idcentrofichamedicaitem, idcentrofichamedicapreauditada, idfichamedica, idfichamedicaitem, idfichamedicapreauditada, idmotivodebitofacturacion, idnomenclador, idpractica, idsubcapitulo, mnroregistro, nomenclado, tipo) VALUES (fila.fichamedicapreauditadacc, fila.fmpacantidad, fila.fmpadescripcion, fila.fmpadescripciondebito, fila.fmpafechaingreso, fila.fmpaidusuario, fila.fmpaiimporteiva, fila.fmpaiimportes, fila.fmpaiimportetotal, fila.fmpaimportedebito, fila.fmpaporeintegro, fila.idauditoriaodontologiacodigo, fila.idcapitulo, fila.idcentrofichamedica, fila.idcentrofichamedicaitem, fila.idcentrofichamedicapreauditada, fila.idfichamedica, fila.idfichamedicaitem, fila.idfichamedicapreauditada, fila.idmotivodebitofacturacion, fila.idnomenclador, fila.idpractica, fila.idsubcapitulo, fila.mnroregistro, fila.nomenclado, fila.tipo);
+    END IF;
+    RETURN fila;
+    END;
+    $function$
