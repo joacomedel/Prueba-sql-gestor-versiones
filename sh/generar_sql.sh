@@ -25,19 +25,24 @@ if [ -z "$FILES_IN_STAGE" ]; then
 fi
 # echo "BEGIN;" >> "$OUTPUT_FILE"
 # 4. Recorrer cada archivo y guardar su contenido COMPLETO (versión en staging)
-for file in $FILES_IN_STAGE; do
-    echo Se agrega el archivo $file
+echo "$FILES_IN_STAGE" | while IFS= read -r file; do
+    if [[ "$file" != *.sql ]]; then
+        echo "❌ $file no se agrega porque no es un archivo .sql"
+        continue
+    fi
+
+    echo "✅ Se agrega el archivo $file"
     if [ -f "$file" ]; then
         echo "-- === Contenido completo de $file (staging) ===" >> "$OUTPUT_FILE"
-        # Usa 'git show :archivo' para obtener la versión en staging
         git show :"$file" >> "$OUTPUT_FILE"
+        echo ";" >> "$OUTPUT_FILE"
         echo -e "\n" >> "$OUTPUT_FILE"
     else
         echo "-- === $file (archivo borrado en staging) ===" >> "$OUTPUT_FILE"
         #deberia meter comando sql para borrar sp
     fi
 done
-# echo "COMMIT;" >> "$OUTPUT_FILE"
+
 
 echo "✅ Contenido COMPLETO de los archivos en staging guardado en $OUTPUT_FILE"
 ./sh/ejecutar_sql.sh "$1"

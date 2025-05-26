@@ -1,2 +1,0 @@
--- === public.contabilidad_balancecontable_asiento_cuentas_patrimoniales(pfiltros (archivo borrado en staging) ===
--- === cv).sql (archivo borrado en staging) ===
