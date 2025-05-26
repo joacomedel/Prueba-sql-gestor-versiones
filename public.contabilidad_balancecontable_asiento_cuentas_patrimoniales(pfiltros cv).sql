@@ -13,7 +13,7 @@ AS $function$DECLARE
 	  salida boolean;
 	  diferencia 	double precision;
 BEGIN
---Osea anda
+--Osea anda prueba segunda subida 
 ---SELECT contabilidad_balancecontable_asiento_cuentas_patrimoniales('{idejerciciocontable=8}')
        salida = false;
 	   diferencia = 0;
